@@ -23,21 +23,21 @@ class Solution {
     public Node connect(Node root) {
         if(root==null) return root;
         // Think complete ques. as PERFECT BINARY TREE
-        /*      1
+        /*      1 -> null
               /   \
-             2     3
+             2  -> 3 -> null
            /  \   /  \
-          4   5  6    7
+          4 -> 5->6 -> 7 -> null
         */
         Node leftMost = root; //initialised as root
         while(leftMost.left!=null){ //till reached leaf
             Node curr = leftMost;
-            while(curr!=null){
+            while(curr!=null){ // since null bhi show krna hai
                 curr.left.next = curr.right; // 4->5
                 if(curr.next!=null){
                     curr.right.next = curr.next.left; // 5->6
                 }
-                curr = curr.next; // Do same for 3 i.e. 6->7
+                curr = curr.next; // 2 -> 3 -> null
             }
             leftMost = leftMost.left;
         }
