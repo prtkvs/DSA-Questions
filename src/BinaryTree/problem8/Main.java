@@ -52,7 +52,7 @@ class Solution {
             Integer r = list.get(right);
 
             if (l == null && r == null) {
-                // OK
+                // for skipping false condition
             } else if (l == null || r == null || !l.equals(r)) {
                 return false;
             }
