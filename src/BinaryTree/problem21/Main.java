@@ -35,7 +35,7 @@ class Solution {
 }
 public class Main {
     public static void main(String[] args) {
-        // Manually constructing the tree in the image:
+
         //       6
         //      / \
         //     4   10
