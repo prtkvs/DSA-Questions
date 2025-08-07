@@ -7,7 +7,7 @@ class Solution {
         Collections.sort(arr);
         int n = arr.size();
         int minDiff = Math.abs(arr.get(0)-arr.get(m-1));
-        int diff =  Math.abs(arr.get(0)-arr.get(m-1));
+        int diff;
         for(int i=1;i<n-m+1;i++){
             diff = Math.abs(arr.get(i) - arr.get(i+m-1));
             minDiff = Math.min(diff,minDiff);
