@@ -20,6 +20,7 @@ class Solution {
             map.put(temp1,temp1.val);
             temp1= temp1.next;
         }
+        // temp1 mat use karna ab wo null pahuch chuka hai
         while(temp2!=null){
             if(map.containsKey(temp2) && map.get(temp2)==temp2.val){
                 return temp2;
