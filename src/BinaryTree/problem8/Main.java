@@ -52,7 +52,9 @@ class Solution {
             Integer r = list.get(right);
 
             if (l == null && r == null) {
-                // for skipping false condition
+            // if both nodes at end are null then also they are symmetric
+            // therefore don't mark it false
+            // helping in ignoring this scenario, otherwise next condition will make it false
             } else if (l == null || r == null || !l.equals(r)) {
                 return false;
             }
